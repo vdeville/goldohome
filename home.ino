@@ -8,7 +8,7 @@
 boolean DEBUG = true;
 
 int LED_SALON = 4;
-int LED_WC = 5;
+int LED_WC = 5; 
 int LED_SALLEBAIN = 6;
 int LED_CHAMBRE1 = 7;
 int LED_CHAMBRE2 = 8;
@@ -30,9 +30,16 @@ void setup() {
 }
 
 void loop() {
-  powerOnLed(LED_SALON);
   delay(2000);
-  powerOffLed(LED_SALON);
+  powerOnLed(LED_SALLEBAIN);
+  powerOnLed(LED_WC);
+  powerOnLed(LED_CHAMBRE1);
+  powerOnLed(LED_CHAMBRE2);
+  delay(4000);
+  powerOffLed(LED_SALLEBAIN);
+  powerOffLed(LED_WC);
+  powerOffLed(LED_CHAMBRE1);
+  powerOffLed(LED_CHAMBRE2);
 }
 
 
